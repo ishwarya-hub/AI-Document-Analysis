@@ -27,7 +27,7 @@ class Settings(BaseSettings):
 
     # --- Models ---
     embedding_model: str = "all-MiniLM-L6-v2"
-    gemini_model: str = "gemini-2.5-flash"
+    gemini_model: str = "gemini-flash-latest"
     spacy_model: str = "en_core_web_sm"
 
     # --- Chunking ---

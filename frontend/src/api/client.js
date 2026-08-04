@@ -4,7 +4,7 @@ import axios from 'axios';
 const API_KEY = import.meta.env.VITE_API_KEY || 'your_super_secret_api_key_here';
 
 const client = axios.create({
-  baseURL: '',     // Uses Vite dev proxy → http://localhost:8000
+  baseURL: import.meta.env.VITE_BACKEND_URL || '',     // Uses VITE_BACKEND_URL in production, falls back to local proxy in dev
   timeout: 120000, // 2 min for large document processing
   headers: {
     'Content-Type': 'application/json',
